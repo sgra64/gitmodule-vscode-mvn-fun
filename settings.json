@@ -1,0 +1,79 @@
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// VSCode project settings file.
+{
+    // Java Code Runner settings
+    "code-runner.defaultLanguage": "java",
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.executorMap": {
+        "java": "java -cp target/classes @.vscode/launch-coderunner"
+    },
+
+    // Java and debug settings
+    "java.autobuild.enabled": true,
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.debug.settings.showHex": true,
+
+    // Editor settings
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,            // insert spaces for tabs
+    "editor.renderWhitespace": "all",       // show white spaces in editor as small dot
+    "editor.hover.enabled": true,           // show context when hovering
+    "editor.hover.delay": 1500,             // delay hover-time for context pop-ups (in ms)
+    "editor.minimap.enabled": false,        // show minimap for long files
+    "editor.inlayHints.enabled": "off",     // don't show argument names in method calls
+
+    "explorer.confirmDelete": false,        // ask to comfirm file delete
+    "files.autoSave": "afterDelay",         // 'afterDelay' (1sec), 'onFocusChange', 'onWindowChange'
+    "files.autoSaveDelay": 800,
+    "files.eol": "\n",                      // use '\n' as default line ending (not: CR/LF)
+
+    // Terminal settings, see https://code.visualstudio.com/docs/terminal/profiles
+    "terminal.integrated.defaultProfile.windows": "Bash",
+    "terminal.integrated.profiles.windows": {
+        "Bash": {
+          "path": ["bash"],
+          "args": ["--init-file", "'${workspaceFolder}'/.vscode/launch-terminal.sh"],
+        //   "args": ["--init-file", "~/.profile"],
+          "icon": "terminal-bash",
+        },
+        "Git Bash": null,                   // remove other terminals from the menu
+        "PowerShell": null,
+        "Command Prompt": null,
+        "JavaScript Debug Terminal": null,
+        "Ubuntu (WSL)": null,
+    }
+}
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Java settings for VSCode:
+//  - https://code.visualstudio.com/docs/languages/java
+//  - https://code.visualstudio.com/docs/java/java-tutorial
+// 
+// VSCode Extension for Java development:
+//  - Extension Pack for Java (Microsoft)
+//    https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack
+// 
+//  - Java Code Runner (Jun Han)
+//    https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
+// 
+// VSCode global settings file and project caches:
+//  - Windows: '%APPDATA%/Code/User' | 'C:/Users/<user>/AppData/Roaming/Code/User'
+//  - MacOS:   '~/Library/Application\ Support/Code/User'
+//  - Linux:   '$HOME/.config/Code/User/settings.json'
+//        +
+//        +-- settings.json         ; VSCode global settings file
+//        +-- workspaceStorage      ; VSCode project caches
+// 
+// VSCode installation paths:
+//  - Windows: '%APPDATA%/Local/Programs/Microsoft\ VS\ Code/bin'
+//  - MacOS:   '/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin'
+// 
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// VSCode commands:
+//  - build: Ctrl-Shift-B
+//  - run:   Ctrl-Alt-N
+//  - clean Java Language Server Workspace: Ctrl-Shift-P
+//  - block comment: mark text and Ctrl-'#'
+//  - multi-cursor edits: Ctrl-Alt-<ArrowUp,Down> or Alt+<Click>
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
