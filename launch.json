@@ -4,22 +4,30 @@
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 {
     "version": "1.0.0",
-    "configurations": [ {
+    "configurations": [
+        {
             "type": "java",
-            "name": "Launch_com.mycompany",
+            "name": "mvn-jdbc",
             "request": "launch",
-            "mainClass": "com.mycompany.app.App",
-            "args": ["3", "27", "1092", "65536", "10952347", "100000039"],
-            "console": "integratedTerminal",    // reuse terminal
-            "vmArgs": "",
-        }, {
+            "mainClass": "mvn.jdbc.application.Application",
+            "projectName": "mvn-jdbc",
+            "vmArgs": "-cp $CLASSPATH"
+        },
+        {
             "type": "java",
             "name": "Launch_de.factorizer",
             "request": "launch",
             "mainClass": "de.factorizer.App",
-            "args": ["3", "27", "1092", "65536", "10952347", "100000039"],
+            "args": [
+                "3",
+                "27",
+                "1092",
+                "65536",
+                "10952347",
+                "100000039"
+            ],
             "console": "integratedTerminal",
-            "vmArgs": "",
+            "vmArgs": ""
         }
     ]
 }
