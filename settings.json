@@ -6,7 +6,7 @@
     "code-runner.clearPreviousOutput": true,
     "code-runner.saveAllFilesBeforeRun": true,
     "code-runner.executorMap": {
-        "java": "java -cp @classpath mvn.jdbc.application.Application"
+        "java": "bash -c .vscode/launch-coderunner.sh"
     },
 
     // Java and debug settings
@@ -42,10 +42,11 @@
         "PowerShell": null,
         "Command Prompt": null,
         "JavaScript Debug Terminal": null,
-        "Ubuntu (WSL)": null,
+        "Ubuntu (WSL)": null
     },
-    "terminal.integrated.hideOnStartup": "always",  // prevent terminal show-up on startup
+    "terminal.integrated.hideOnStartup": "always"   // prevent terminal show-up on startup
 }
+// 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Java settings for VSCode:
 //  - https://code.visualstudio.com/docs/languages/java
@@ -60,9 +61,9 @@
 // 
 // VSCode global settings file and project caches:
 //  - Windows: '%APPDATA%/Code/User' | 'C:/Users/<user>/AppData/Roaming/Code/User'
-//  - MacOS:   '~/Library/Application\ Support/Code/User'
+//  - MacOS:   '~/Library/Application\ Support/Code/User/settings.json'
 //  - Linux:   '$HOME/.config/Code/User/settings.json'
-//        +
+//        + 
 //        +-- settings.json         ; VSCode global settings file
 //        +-- workspaceStorage      ; VSCode project caches
 // 
@@ -73,8 +74,9 @@
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // VSCode commands:
 //  - build: Ctrl-Shift-B
-//  - run:   Ctrl-Alt-N
-//  - clean Java Language Server Workspace: Ctrl-Shift-P
+//  - run with Code Runner: Ctrl-Alt-N
+//  - open launch panel: Shift-Ctrl-D
+//  - open command palette: Ctrl-Shift-P
 //  - block comment: mark text and Ctrl-'#'
 //  - multi-cursor edits: Ctrl-Alt-<ArrowUp,Down> or Alt+<Click>
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

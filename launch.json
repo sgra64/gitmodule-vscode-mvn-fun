@@ -1,5 +1,5 @@
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// VSCode launch configuration for the "Run and Debug" pane (Shift+Ctrl+D)
+// VSCode launch configuration for the "Run and Debug" panel (Shift+Ctrl+D)
 //  - https://code.visualstudio.com/docs/java/java-debugging
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 {
@@ -7,15 +7,14 @@
     "configurations": [
         {
             "type": "java",
-            "name": "mvn-jdbc",
+            "name": "mycompany.app",
             "request": "launch",
-            "mainClass": "mvn.jdbc.application.Application",
-            "projectName": "mvn-jdbc",
-            "vmArgs": "-cp $CLASSPATH"
+            "mainClass": "com.mycompany.app.App",
+            "console": "integratedTerminal"
         },
         {
             "type": "java",
-            "name": "Launch_de.factorizer",
+            "name": "de.factorizer",
             "request": "launch",
             "mainClass": "de.factorizer.App",
             "args": [
@@ -27,6 +26,14 @@
                 "100000039"
             ],
             "console": "integratedTerminal",
+            "vmArgs": ""
+        },
+        {
+            "type": "java",
+            "name": "mvn-jdbc",
+            "request": "launch",
+            "mainClass": "mvn.jdbc.application.Application",
+            "projectName": "mvn-jdbc",
             "vmArgs": ""
         }
     ]

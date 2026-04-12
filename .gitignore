@@ -1,5 +1,7 @@
 # files ignored by git
 
 # tolerate changes in these files
-launch-coderunner
 launch.json
+
+# ignore file with main class, e.g. 'com.example.Main'
+main-class
