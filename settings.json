@@ -6,7 +6,7 @@
     "code-runner.clearPreviousOutput": true,
     "code-runner.saveAllFilesBeforeRun": true,
     "code-runner.executorMap": {
-        "java": "bash -c .vscode/launch-coderunner.sh"
+        "java": "bash .vscode/launch-coderunner.sh"
     },
 
     // Java and debug settings

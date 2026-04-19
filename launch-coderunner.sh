@@ -11,6 +11,10 @@ mcfile=".vscode/main-class"
 # file with classpath, e.g. 'target/classes:lib/dependency1.jar:lib/dependency2.jar'
 cpfile="target/classpath"
 
+# file with command line arguments for the main class, e.g. '--option value'
+argsfile=".vscode/args"
+
+
 # create file '.vscode/main-class' with main class, e.g. 'com.example.Main'
 # if a main()-method is found in 'src/main/java'
 function find_mainclass() {
@@ -48,5 +52,5 @@ function build_classpath() {
 
 # if file with classpath exists, launch with 'java'
 [ -f "$cpfile" ] &&
-    java -cp "$(cat $cpfile)" "$(cat $mcfile)" ||
+    java -cp "$(cat $cpfile)" "$(cat $mcfile)" $([ -f "$argsfile" ] && cat $argsfile) ||
     echo "Error: no file '$cpfile'"
