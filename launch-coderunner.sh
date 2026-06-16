@@ -36,7 +36,8 @@ function build_classpath() {
     # 
     echo "building $cpfile..."
     local cp="target/classes${sep}$(mvn dependency:build-classpath | grep '\.jar')" &&
-    echo $cp | tee $cpfile
+    # echo $cp | tee $cpfile
+    echo $cp > $cpfile
 }
 
 # if file with main class does not exist or is empty, search for main() and create file
